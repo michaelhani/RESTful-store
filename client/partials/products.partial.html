@@ -1,0 +1,36 @@
+<h1>Products</h1>
+<form class="form">
+	<div class="form-group">
+		<label for="productName">Product:</label> 
+		<input type="text" class="form-control" id="productName" ng-model="productsCtrl.newProduct.name">
+	</div>
+	<div class="form-group">
+		<label for="productImage">Image URL: </label> <!-- TODO add in image upload rather than URL upload -->
+		<input type="text" class="form-control" id="productImage" ng-model="productsCtrl.newProduct.image">
+	</div>
+	<div class="form-group">
+		<label for="productDesc">Description: </label>
+		<input type="text" class="form-control" id="productDesc" ng-model="productsCtrl.newProduct.desc">
+	</div>
+	<div class="form-group">
+		<label for="productStock">Stock:</label> 
+		<input type="text" class="form-control" id="productStock" ng-model="productsCtrl.newProduct.stock">
+	</div>
+	<button class="btn btn-success" ng-click="productsCtrl.addProduct()">Add Product</button>
+</form>
+<table class="table">
+	<thead>
+		<th>Product</th>
+		<th>Image</th>
+		<th>Description</th>
+		<th>Stock</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="product in products">
+			<td ng-bind='product.name'></td>
+			<td><a href="{{product.image}}">Image</a></td>
+			<td ng-bind='product.desc'></td>
+			<td ng-bind='product.stock'></td>
+			<td><button class="btn btn-danger" ng-click="productsCtrl.removeProduct(product)">Delete</button></td>
+		</tr>
+</tbody>

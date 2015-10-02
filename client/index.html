@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Orders and customers</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/javascript" src="/js/factories/order.factory.js"></script>
+	<script type="text/javascript" src="/js/factories/customer.factory.js"></script>
+	<script type="text/javascript" src="/js/factories/product.factory.js"></script>
+	<script type="text/javascript" src="/js/controllers/orders.controller.js"></script>
+	<script type="text/javascript" src="/js/controllers/customers.controller.js"></script>
+	<script type="text/javascript" src="/js/controllers/products.controller.js"></script>
+</head>
+<body ng-app="app">
+<div class="container">
+	<h1>Basic RESTful Store</h1>
+	<a href="#/customers">Customers</a> | <a href="#/orders">Orders</a> | <a href="#/products">Products</a>
+	<div ng-view=""></div>
+</div>
+</body>
+</html>

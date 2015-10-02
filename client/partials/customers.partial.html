@@ -1,0 +1,21 @@
+<h1>Add a new Customer</h1>
+<form>
+	<div class="form-group">	
+		<label for="customerName">Customer Name:</label> <input type="text" id="customerName" placeholder="name..." ng-model="newCustomer.name">
+	</div>
+		<button class="btn btn-success" ng-click="custCtrl.addCustomer()">Add</button>
+</form>
+<h3>{{errors.message}}</h3>
+<table class="table table-hover">
+	<thead>
+		<th>Customer Name</th>
+		<th>Date Added</th>
+		<th>Delete Customer</th>
+	</thead>
+	<tbody>	
+	<tr ng-repeat="customer in customers">
+		<td ng-bind="customer.name"></td>
+		<td ng-bind="customer.date | date:medium"></td>
+		<td><button class="btn btn-danger" ng-click="custCtrl.removeCustomer(customer)">DELETE</button></td>
+	</tbody>
+</table>
