@@ -27,9 +27,9 @@
 	</thead>
 	<tbody>
 		<tr ng-repeat="product in products">
-			<td ng-bind='product.name'></td>
-			<td><a href="{{product.image}}">Image</a></td>
-			<td ng-bind='product.desc'></td>
+			<td ng-bind='product.name | capitalize'></td>
+			<td><img class="center-block img-responsive img-circle" ng-src="{{product.image}}"/></td>
+			<td ng-bind='product.desc | capitalize'></td>
 			<td ng-bind='product.stock'></td>
 			<td><button class="btn btn-danger" ng-click="productsCtrl.removeProduct(product)">Delete</button></td>
 		</tr>
